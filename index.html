@@ -6,8 +6,226 @@
     <title>dev-board</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+    .bg-color{
+        background-color: rgba(55, 82, 253, 0.2);
+    }
+    .bg-btn{
+        background-color: #3752FD;
+    }
+</style>
 </head>
-<body>
-    <h1>hello</h1>
+<body class="bg-color ">
+    <section class="min-h-screen  mx-10 py-10 ">
+        <header class="bg-white p-4 rounded-xl">
+            <nav class="flex justify-between">
+                <div class="flex gap-4">
+                    <img class="w-10 h-10" src="./assets/logo.png" alt="">
+                    <h1 class="text-2xl">Dev<span class="font-bold">Board</span></h1>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex gap-3 bg-color p-2 rounded-full">
+                        <img class="w-6 h-6" src="./assets/checkbox.png" alt="">
+                        <h1>23</h1>
+                    </div>
+                    <button class="bg-color p-2 rounded-full"><img class="w-6 h-6" src="./assets/theme-btn.png" alt=""></button>
+                </div>
+
+            </nav>
+        </header>
+
+
+        <!-- main part -->
+         <main class="flex gap-8" >
+            <!-- 1st  section -->
+            <section class=" w-3/4 bg-white my-10 rounded-xl p-4  ">
+                <div class="tab-cards flex gap-8">
+                    <div class="flex gap-6 bg-color p-8 rounded-xl">
+                        <button class="bg-white px-2 flex items-center rounded-full "><img class="w-4 h-4 " src="./assets/checkbox.png" alt=""></button>
+                        <div>
+                            <p>Task Assiged</p>
+                            <h1 class="font-bold text-lg">6</h1>
+                        </div>
+                    </div>
+
+
+                    <div style="background: linear-gradient(to right, #3752FD, #6C7FFA, #9BA8F8);" class=" bg-color rounded-xl w-96  bg-gradient-to-r from-blue-900 to-blue-500">
+                        <button class="flex  gap-2 ">
+                            <img class="p-4 w-24 h-24" src="./assets/board.png" alt="">
+                            <div class="py-8 "><h1 class="text-white ">Discover Something<br>New Today!</h1></div>
+                        </button>
+                    </div>
+
+
+
+                    <div id="datetime" class="flex gap-6 bg-color p-8 rounded-xl">
+                        <img class="w-6 h-6" src="./assets/calender.png" alt="">
+                       <div>
+                         
+                         <p>wed,</p>
+                        <h1>july 28 2025</h1>
+                       </div>
+                    </div>
+
+                    <!-- <div id="datetime" class="bg-slate-500">hello</div> -->
+
+                </div>
+
+
+                <!-- 6 cards -->
+                 <div class="cards  grid grid-cols-3 gap-7 mt-12">
+                    <div class="bg-color rounded-xl p-4">
+                        <p class="bg-white p-2 w-fit rounded-lg">ShopEase</p>
+                       
+  <div class="mt-4">
+    <h2 class="font-bold text-lg">Fix Mobile Button Issue </h2>
+    <div class="card bg-base-100 p-2 shadow-sm my-4">
+    <p>Debug using Chrome <br> DevTools, check for overlappin...</p>
+    </div>
+    <div class="card-actions flex justify-between">
+        <div>
+            <p>Deadline</p>
+        <h2 class="font-bold">21 march,2025</h2>
+        </div>
+      <button  class="btn btn-primary bg-btn border-0">Completed</button>
+    </div>
+  
+</div>
+                    </div>
+
+
+                    <div class="bg-color rounded-xl p-4">
+                        <p class="bg-white p-2 w-fit rounded-lg">CloudSync/p>
+                       
+  <div class="mt-4">
+    <h2 class="font-bold text-lg">Add Dark Mode </h2>
+    <div class="card bg-base-100 p-2 shadow-sm my-4">
+    <p>Store the user's preference in <br>localStorage, update CSS vari...</p>
+    </div>
+    <div class="card-actions flex justify-between">
+        <div>
+            <p>Deadline</p>
+        <h2 class="font-bold">21 march,2025</h2>
+        </div>
+      <button  class="btn btn-primary bg-btn border-0">Completed</button>
+    </div>
+  
+</div>
+                    </div>
+
+
+                    <div class="bg-color rounded-xl p-4">
+                        <p class="bg-white p-2 w-fit rounded-lg">SwiftPay</p>
+                       
+  <div class="mt-4">
+    <h2 class="font-bold text-lg">Optimize Home Page </h2>
+    <div class="card bg-base-100 p-2 shadow-sm my-4">
+    <p>DDebug using Chrome <br>DevTools, check for overlappin...</p>
+    </div>
+    <div class="card-actions flex justify-between">
+        <div>
+            <p>Deadline</p>
+        <h2 class="font-bold">21 march,2025</h2>
+        </div>
+      <button  class="btn btn-primary bg-btn border-0">Completed</button>
+    </div>
+  
+</div>
+                    </div>
+
+
+                    <div class="bg-color rounded-xl p-4">
+                        <p class="bg-white p-2 w-fit rounded-lg">Meta</p>
+                       
+  <div class="mt-4">
+    <h2 class="font-bold text-lg">Add new emoji 🤲 </h2>
+    <div class="card bg-base-100 p-2 shadow-sm my-4">
+    <p>Debug using Chrome <br> DevTools, check for overlappin...</p>
+    </div>
+    <div class="card-actions flex justify-between">
+        <div>
+            <p>Deadline</p>
+        <h2 class="font-bold">21 march,2025</h2>
+        </div>
+      <button  class="btn btn-primary bg-btn border-0">Completed</button>
+    </div>
+  
+</div>
+                    </div>
+
+
+                    <div class="bg-color rounded-xl p-4">
+                        <p class="bg-white p-2 w-fit rounded-lg">Google LLC</p>
+                       
+  <div class="mt-4">
+    <h2 class="font-bold text-lg">Integrate OpenAI API  </h2>
+    <div class="card bg-base-100 p-2 shadow-sm my-4">
+    <p>Debug using Chrome <br>DevTools, check for overlappin...</p>
+    </div>
+    <div class="card-actions flex justify-between">
+        <div>
+            <p>Deadline</p>
+        <h2 class="font-bold">21 march,2025</h2>
+        </div>
+      <button  class="btn btn-primary bg-btn border-0">Completed</button>
+    </div>
+  
+</div>
+                    </div>
+
+
+                    <div class="bg-color rounded-xl p-4">
+                        <p class="bg-white p-2 w-fit rounded-lg">GlassDoar</p>
+                       
+  <div class="mt-4">
+    <h2 class="font-bold text-lg">Improve Job searching </h2>
+    <div class="card bg-base-100 p-2 shadow-sm my-4">
+    <p>Debug using Chrome <br>DevTools, check for overlappin...</p>
+    </div>
+    <div class="card-actions flex justify-between">
+        <div>
+            <p>Deadline</p>
+        <h2 class="font-bold">21 march,2025</h2>
+        </div>
+      <button  class="btn btn-primary bg-btn border-0">Completed</button>
+    </div>
+  
+</div>
+                    </div>
+                 </div>
+            
+         </section>
+
+
+
+         <!-- pasher 2nd section -->
+          <section class="w-1/4 bg-white my-10 rounded-xl p-4">
+
+          </section>
+
+         </main>
+
+    </section>
+
+
+    <!-- script -->
+     <!-- <script>
+        function upDateTime(){
+            const now = new Date();
+
+            const options = {weekend:'long', year: 'numeric', month:'long', day:'numeric' };
+
+            const dataTimeString = now.toLocaleDateString('en-US',options);
+
+            document.getElementById('datetime').textContent = upDateTimeString;
+        }
+
+        upDateTimeString();
+
+        setInterval(upDateTime, 1000);
+     </script> -->
 </body>
 </html>
