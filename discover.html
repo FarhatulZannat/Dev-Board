@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>
+
+        body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+    .bg-color{
+        background-color: rgba(55, 82, 253, 0.1);
+        
+    }
+    .bg-btn{
+        background-color: #3752FD;
+    }
+
+    .text{
+        color: rgba(0, 0, 0, .5);
+    }   
+
+</style>
+</head>
+<body class="bg-color">
+    <section class="min-h-screen  mx-10 py-10 ">
+        <header class="bg-white p-4 rounded-xl">
+            <nav class="flex justify-between ">
+                <div class="flex gap-4">
+                    <img class="w-10 h-10" src="./assets/logo.png" alt="">
+                    <h1 class="text-2xl">Dev<span class="font-bold">Board</span></h1>
+                </div>
+               
+                    
+                   <a href="index.html">
+                     <button id="nav-color" class=" cursor-pointer bg-violet-800 p-2 rounded-md text-white">Back to Desk</button>
+                   </a>
+
+                
+
+            </nav>
+        </header>
+
+        
+                   <h1 class="font-extrabold text-center text-2xl mt-3 mb-3">Blogs</h1>
+
+                   
+                    <div class="space-y-10">
+                        <div class="bg-white p-4 rounded-lg">
+                        <h1 class="pb-4 font-bold border-b-2 border-dotted border-gray-300">Question-1: What are the different ways to select an element in the DOM?</h1>
+                    <p class="pt-4 text"> There are many different ways to select an element in the DOM. <br>
+
+getElementById(): Selects a single element by its unique ID, returning the first matching element. <br>
+
+getElementsByTagName(): Selects all elements with a specified tag name, returning an HTMLCollection. <br>
+
+getElementsByClassName(): Selects all elements with a specified class name, returning an HTMLCollection. <br>
+
+getElementsByName(): Selects all elements with the same name attribute, returning a NodeList. <br>
+
+querySelector(): Selects the first element that matches a specified CSS selector, returning a single element. <br>
+
+querySelectorAll(): Selects all elements that match a specified CSS selector, returning a static NodeList.</p>
+                    </div>
+
+                        <div class="bg-white p-4 rounded-lg">
+                            <h1 class="pb-4 font-bold border-b-2 border-dotted border-gray-300">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h1>
+                        <p class="pt-4 text">innerHTML: deals with the entire HTML structure. <br>
+innerText: focuses on the visually rendered text content. <br>
+textContent: retrieves all raw text content, including hidden elements and preserving source formatting.</p>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-lg">
+                            <h1 class="pb-4 font-bold border-b-2 border-dotted border-gray-300" >Question-3: What is event delegation in the DOM?</h1>
+                        <p class="pt-4 text">In the context of events, a delegate is an intermediary or pointer-like mechanism between the event source and the code that handles the event. </p>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-lg">
+                            <h1 class="pb-4 font-bold border-b-2 border-dotted border-gray-300">Question-4: What is event bubbling in the DOM?</h1>
+                        <p class="pt-4 text">When an element (like a button) is clicked, an event is directed to the element. If an event handler is set for the element, the event handler is triggered. Then the event "bubbles up" to the elements parent. If an event handler is set for the parent, this event handler is triggered.</p>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-lg">
+                            <h1 class="font-bold border-b-2 border-dotted border-gray-300 pb-4">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
+                        <p class="pt-4 text">1. Creating an Element: To create HTML elements there is a method called document.createElement('tagName') . The tagName parameter can be any valid HTML element like h1 tag p tag  a tag etc. The method returns a new HTML element. <br>2. Adding an Element: After creating an element, you need to add it to the DOM, typically as a child of an existing element.
+appendChild(): This method adds an element as the last child of a specified parent element. insertBefore(): This method allows you to insert an element before a specified child element of a parent.<br>3. Removing an Element:
+To remove an element from the DOM, you can use one of two primary methods:
+removeChild(): This method is called on the parent of the element you want to remove and takes the child element as an argument.remove(): This method is called directly on the element you want to remove, and it removes itself from its parent. This is a more modern and often more convenient method.</p>
+                        </div>
+                    </div>
+                    
+                   
+    </section>
+</body>
+</html>

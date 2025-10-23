@@ -6,15 +6,25 @@
     <title>dev-board</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 <style>
+
+    body {
+    font-family: 'Poppins', sans-serif ;
+  }
     .bg-color{
-        background-color: rgba(55, 82, 253, 0.2);
+        background-color: rgba(55, 82, 253, 0.1);
+        
     }
     .bg-btn{
         background-color: #3752FD;
+    }
+    .text{
+        color: rgba(0, 0, 0, .5);
     }
 </style>
 </head>
@@ -29,9 +39,9 @@
                 <div class="flex gap-4">
                     <div class="flex gap-3 bg-color p-2 rounded-full">
                         <img class="w-6 h-6" src="./assets/checkbox.png" alt="">
-                        <h1>23</h1>
+                        <h1 id="nav-nmbr">23</h1>
                     </div>
-                    <button class="bg-color p-2 rounded-full"><img class="w-6 h-6" src="./assets/theme-btn.png" alt=""></button>
+                    <button id="nav-color" class=" cursor-pointer bg-color p-2 rounded-full"><img class="w-6 h-6" src="./assets/theme-btn.png" alt=""></button>
                 </div>
 
             </nav>
@@ -39,38 +49,40 @@
 
 
         <!-- main part -->
-         <main class="flex gap-8" >
+         <main class="flex gap-4" >
             <!-- 1st  section -->
-            <section class=" w-3/4 bg-white my-10 rounded-xl p-4  ">
-                <div class="tab-cards flex gap-8">
-                    <div class="flex gap-6 bg-color p-8 rounded-xl">
-                        <button class="bg-white px-2 flex items-center rounded-full "><img class="w-4 h-4 " src="./assets/checkbox.png" alt=""></button>
+            <section class=" w-3/4 bg-white my-5 rounded-xl p-4  ">
+                <div class="tab-cards flex gap-4">
+                    <div class="flex gap-6 bg-color p-6 rounded-xl">
+                        <div class="bg-white  w-14 h-14  flex items-center justify-center rounded-full "><img class="w-4 h-4 " src="./assets/checkbox.png" alt=""></div>
                         <div>
                             <p>Task Assiged</p>
-                            <h1 class="font-bold text-lg">6</h1>
+                            <h1 id="assiged-nmbr" class="font-bold text-lg">6</h1>
                         </div>
                     </div>
 
 
-                    <div style="background: linear-gradient(to right, #3752FD, #6C7FFA, #9BA8F8);" class=" bg-color rounded-xl w-96  bg-gradient-to-r from-blue-900 to-blue-500">
-                        <button class="flex  gap-2 ">
+                    <a href="discover.html">
+                        <div style="background: linear-gradient(to right, #3752FD, #6C7FFA, #9BA8F8);" class="cursor-pointer bg-color rounded-xl w-96  bg-gradient-to-r from-blue-900 to-blue-500">
+                        <button class="flex cursor-pointer  gap-2 ">
                             <img class="p-4 w-24 h-24" src="./assets/board.png" alt="">
-                            <div class="py-8 "><h1 class="text-white ">Discover Something<br>New Today!</h1></div>
+                            <div  class="py-8 cursor-pointer"><h1 class="text-white ">Discover Something<br>New Today!</h1></div>
                         </button>
                     </div>
+                    </a>
 
 
+                                  <!-- Current date -->
+                    <div id="datetime" class="flex gap-6 bg-color p-6 rounded-xl">
+                        <div class="bg-white w-14 h-14 flex justify-center items-center rounded-full">
+                            <img class="w-6 h-6 " src="./assets/calender.png" alt="">
+                        </div>
+                      
 
-                    <div id="datetime" class="flex gap-6 bg-color p-8 rounded-xl">
-                        <img class="w-6 h-6" src="./assets/calender.png" alt="">
-                       <div>
-                         
-                         <p>wed,</p>
-                        <h1>july 28 2025</h1>
-                       </div>
+                       <p id="date" class="font-semibold flex items-center "></p>
                     </div>
 
-                    <!-- <div id="datetime" class="bg-slate-500">hello</div> -->
+                    
 
                 </div>
 
@@ -81,16 +93,16 @@
                         <p class="bg-white p-2 w-fit rounded-lg">ShopEase</p>
                        
   <div class="mt-4">
-    <h2 class="font-bold text-lg">Fix Mobile Button Issue </h2>
+    <h2 class="font-medium text-lg">Fix Mobile Button Issue </h2>
     <div class="card bg-base-100 p-2 shadow-sm my-4">
-    <p>Debug using Chrome <br> DevTools, check for overlappin...</p>
+    <p class="text">Debug using Chrome <br> DevTools, check for overlappin...</p>
     </div>
     <div class="card-actions flex justify-between">
         <div>
-            <p>Deadline</p>
-        <h2 class="font-bold">21 march,2025</h2>
+            <p class="text">Deadline</p>
+        <h2 class="font-medium">21 march,2025</h2>
         </div>
-      <button  class="btn btn-primary bg-btn border-0">Completed</button>
+      <button  class = "blur-btn btn btn-primary bg-btn border-0 transition active:opacity-70">Completed</button>
     </div>
   
 </div>
@@ -98,19 +110,19 @@
 
 
                     <div class="bg-color rounded-xl p-4">
-                        <p class="bg-white p-2 w-fit rounded-lg">CloudSync/p>
+                        <p class="bg-white p-2 w-fit rounded-lg">CloudSync</p>
                        
   <div class="mt-4">
-    <h2 class="font-bold text-lg">Add Dark Mode </h2>
+    <h2 class="font-medium text-lg">Add Dark Mode </h2>
     <div class="card bg-base-100 p-2 shadow-sm my-4">
-    <p>Store the user's preference in <br>localStorage, update CSS vari...</p>
+    <p class="text">Store the user's preference in <br>localStorage, update CSS vari...</p>
     </div>
     <div class="card-actions flex justify-between">
         <div>
-            <p>Deadline</p>
-        <h2 class="font-bold">21 march,2025</h2>
+            <p class="text">Deadline</p>
+        <h2 class="font-medium">21 march,2025</h2>
         </div>
-      <button  class="btn btn-primary bg-btn border-0">Completed</button>
+      <button class=" blur-btn btn btn-primary bg-btn border-0">Completed</button>
     </div>
   
 </div>
@@ -121,16 +133,16 @@
                         <p class="bg-white p-2 w-fit rounded-lg">SwiftPay</p>
                        
   <div class="mt-4">
-    <h2 class="font-bold text-lg">Optimize Home Page </h2>
+    <h2 class="font-medium text-lg">Optimize Home Page </h2>
     <div class="card bg-base-100 p-2 shadow-sm my-4">
-    <p>DDebug using Chrome <br>DevTools, check for overlappin...</p>
+    <p class="text">Debug using Chrome <br>DevTools, check for overlappin...</p>
     </div>
     <div class="card-actions flex justify-between">
         <div>
-            <p>Deadline</p>
-        <h2 class="font-bold">21 march,2025</h2>
+            <p class="text">Deadline</p>
+        <h2 class="font-medium">21 march,2025</h2>
         </div>
-      <button  class="btn btn-primary bg-btn border-0">Completed</button>
+      <button  class="blur-btn btn btn-primary bg-btn border-0">Completed</button>
     </div>
   
 </div>
@@ -141,16 +153,16 @@
                         <p class="bg-white p-2 w-fit rounded-lg">Meta</p>
                        
   <div class="mt-4">
-    <h2 class="font-bold text-lg">Add new emoji 🤲 </h2>
+    <h2 class="font-medium text-lg">Add new emoji 🤲 </h2>
     <div class="card bg-base-100 p-2 shadow-sm my-4">
-    <p>Debug using Chrome <br> DevTools, check for overlappin...</p>
+    <p class="text">Debug using Chrome <br> DevTools, check for overlappin...</p>
     </div>
     <div class="card-actions flex justify-between">
         <div>
-            <p>Deadline</p>
-        <h2 class="font-bold">21 march,2025</h2>
+            <p class="text">Deadline</p>
+        <h2 class="font-medium">21 march,2025</h2>
         </div>
-      <button  class="btn btn-primary bg-btn border-0">Completed</button>
+      <button class=" blur-btn btn btn-primary bg-btn border-0">Completed</button>
     </div>
   
 </div>
@@ -161,16 +173,16 @@
                         <p class="bg-white p-2 w-fit rounded-lg">Google LLC</p>
                        
   <div class="mt-4">
-    <h2 class="font-bold text-lg">Integrate OpenAI API  </h2>
+    <h2 class="font-medium text-lg">Integrate OpenAI API  </h2>
     <div class="card bg-base-100 p-2 shadow-sm my-4">
-    <p>Debug using Chrome <br>DevTools, check for overlappin...</p>
+    <p class="text">Debug using Chrome <br>DevTools, check for overlappin...</p>
     </div>
     <div class="card-actions flex justify-between">
         <div>
-            <p>Deadline</p>
-        <h2 class="font-bold">21 march,2025</h2>
+            <p class="text">Deadline</p>
+        <h2 class="font-medium">21 march,2025</h2>
         </div>
-      <button  class="btn btn-primary bg-btn border-0">Completed</button>
+      <button  class=" blur-btn btn btn-primary bg-btn border-0">Completed</button>
     </div>
   
 </div>
@@ -181,16 +193,16 @@
                         <p class="bg-white p-2 w-fit rounded-lg">GlassDoar</p>
                        
   <div class="mt-4">
-    <h2 class="font-bold text-lg">Improve Job searching </h2>
+    <h2 class="font-medium text-lg">Improve Job searching </h2>
     <div class="card bg-base-100 p-2 shadow-sm my-4">
-    <p>Debug using Chrome <br>DevTools, check for overlappin...</p>
+    <p class="text">Debug using Chrome <br>DevTools, check for overlappin...</p>
     </div>
     <div class="card-actions flex justify-between">
         <div>
-            <p>Deadline</p>
-        <h2 class="font-bold">21 march,2025</h2>
+            <p class="text">Deadline</p>
+        <h2 class="font-medium">21 march,2025</h2>
         </div>
-      <button  class="btn btn-primary bg-btn border-0">Completed</button>
+      <button   class=" blur-btn btn btn-primary bg-btn border-0">Completed</button>
     </div>
   
 </div>
@@ -202,14 +214,20 @@
 
 
          <!-- pasher 2nd section -->
-          <section class="w-1/4 bg-white my-10 rounded-xl p-4">
+          <section class="w-1/4 bg-white my-5 rounded-xl p-4">
             <div >
                 <div class="flex justify-center gap-2">
                     <img src="./assets/activity.png" alt="">
                 <h3 class="font-bold">Activity Log</h3>
                 </div>
-                <button class="bg-btn text-white mt-4 p-2 rounded-lg mx-auto block ">Create History</button>
+                <button id="clear-btn" class=" cursor-pointer bg-btn text-white mt-4 p-2 rounded-lg mx-auto block ">Clear History</button>
             </div>
+
+           
+                <div id="activity-msg" >
+                    <!-- <p>You have completed the task</p> -->
+                </div>
+           
 
           </section>
 
@@ -219,20 +237,13 @@
 
 
     <!-- script -->
-     <!-- <script>
-        function upDateTime(){
-            const now = new Date();
+    
 
-            const options = {weekend:'long', year: 'numeric', month:'long', day:'numeric' };
+    <script>
+        const today = new Date();
 
-            const dataTimeString = now.toLocaleDateString('en-US',options);
-
-            document.getElementById('datetime').textContent = upDateTimeString;
-        }
-
-        upDateTimeString();
-
-        setInterval(upDateTime, 1000);
-     </script> -->
+        document.getElementById('date').innerText = today.toDateString()
+    </script>
+    <script src="./script/work.js"></script>
 </body>
 </html>
